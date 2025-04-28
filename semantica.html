@@ -1,36 +1,64 @@
+<!-- DOCTYPE := indica la versión del documento, actualmente HTML 5.x -->
 <!DOCTYPE html>
+<!-- Etiqueta <html> := engloba el documento entero -->
 <html lang="es">
+<!-- <head> contiene los metadatos (<meta ...>) y las importaciones con <link ...> a veces, también puede tener scripts -->
 <head>
+  <!-- Metadatos -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- El título de la pestaña en el navegador -->
   <title>Semántica</title>
+  <!-- Importaciones: favicon (icono de la pestaña) y una hoja de estilos -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+  <!-- Fuentes -->
+  <!-- Scripts -->
 </head>
+<!-- <body> := contenido del documento -> la parte visible del documento -->
 <body>
   <!-- Cabecera -> título de la página -->
   <header>
     <h1>Semántica</h1>
+    <p>La <strong>semántica</strong> en HTML es el uso de las etiquetas adecuadas para comunicar el significado de la estructura de nuestro documento.</p>
   </header>
   <hr>
   <!-- Navegación -> lista de enlaces -->
   <nav>
     <ul>
-      <li><a href="#">Acerca de</a></li>   
-      <li><a href="#">Tecnologías</a></li>
-      <li><a href="#">Contacto</a></li>
+      <!-- Colocamos # delante del acerca-de para indicar que es un id en la misma página -->
+      <li><a href="#acerca-de">Acerca de</a></li>   
+      <li><a href="#tecnologias">Tecnologías</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
   <hr>
   <!-- Acerca de -->
   <section>
     <header>
-      <h1>Acerca de</h1>
+      <!-- Colocamos el id al que vamos a enlazar SIN # aquí: -->
+      <h1 id="acerca-de">Acerca de</h1>
     </header>
-    <!-- Breve biografía o texto descriptivo de nuestro perfil -->
-    <!-- Imagen -->
-    <!-- Enlace a Github -->
-    <!-- Enlace a Linkedin -->
+    
+    <!-- Usamos un <div> para contener los elementos de la bio: -->
+    <div style="border: 1px solid lightgray; padding: 0 1em 1em;">
+      <!-- Breve biografía o texto descriptivo de nuestro perfil -->
+      <h2>Carlos Soto</h2>
+      <!-- Texto de la biografía -->
+      <p>Desarrollador full-stack Python y Javascript.</p>
+      <p>Programador con experiencia en ciencia de datos.</p>
+      <p>Instructor de Bootcamps de programación.</p>
+      <!-- Imagen -->
+      <img src="gato.jpg"Mi foto de perfil" width="150">
+      <div>
+        <!-- Enlace a Github -->
+        <a href="https://github.com/Carlosoto1" target="_blank">Mi Github</a>
+        <br>
+        <!-- Enlace a Linkedin -->
+        <a href="https://www.linkedin.com/in/cesarlpb89/" target="_blank">Linkedin</a>
+      </div>
+    </div>
+
   </section>
   
   <hr>
@@ -38,20 +66,37 @@
   <!-- Tecnologías -->
   <section>
     <h1>Tecnologías</h1>
+    <!-- <article> := elemento independiente que se repite en nuestra página -->
+    <!-- Tarjetas con información de las tecnologías web que vamos a usar -->
     <article>
-      <h2>HTML</h2>
+      <div style="border: 1px solid lightgray; padding: 0 1em 1em;">
+        <h2>HTML</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="Logo de HTML5" width="150">
+        <p>HTML es un lenguaje de marcado que sirve para crear las páginas web.</p>
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">Más sobre HTML</a>
+      </div>
     </article>
     <article>
-      <h2>CSS</h2>
+      <div style="border: 1px solid lightgray; padding: 0 1em 1em;">
+        <h2>CSS</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Official_CSS_Logo.svg" alt="Logo de CSS" width="150">
+        <p>CSS es un lenguaje que sirve para describir los estilos de los elementos del front-end (HTML, componentes JSX, etc.)</p>
+        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">Más sobre CSS</a>
+      </div>
     </article>
     <article>
       <h2>JS</h2>
     </article>
+
+    <hr>
+    <p><strong>Ejercicio:</strong> completad las tarjetas (biografía y tecnologías) y añadid tech que hayáis usado: SQL, Java, PHP, etc.</p>
+
   </section>
   <!-- Contacto -->
   <hr>
   <section>
     <h1>Contacto</h1>
+    <p>Numero de telefono: <mark>633676692</mark></p>
     <!-- Form de contacto -->
   </section>
   
@@ -63,8 +108,8 @@
 
   <footer>
     <!-- Nombre, logo, enlaces de navegación, etc. -->
-    <img src="./logo.png" alt="Logo">
-    <p>César P.</p>
+    <img src="./logoc.png" alt="Logo">
+    <p>Carlos soto.</p>
     <p>2025</p>
   </footer>
 </body>
